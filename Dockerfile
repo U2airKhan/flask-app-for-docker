@@ -17,5 +17,5 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Run the app with Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+# Run the app with Gunicorn and specify the configuration file
+CMD ["gunicorn", "-c", "gunicorn.conf", "app:app"]
