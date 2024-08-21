@@ -1,0 +1,14 @@
+name: Test environment variables
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: this step is to echo simple variable
+        run: echo "Hello $testvariable"
+        env:
+            testvariable: uzair
